@@ -6,6 +6,16 @@ public class Student {
     public double math;
     public double score;
 
+    public Student(){
+//        System.out.println("无参构造方法");
+    }
+
+    public Student(String name, double chinese, double math){
+//        System.out.println("有参构造方法");
+        this.name = name;
+        this.chinese = chinese;
+        this.math = math;
+    }
     public void pringTotalScore(){
         double total = chinese + math;
         System.out.println(name + "的总分是：" + total);
