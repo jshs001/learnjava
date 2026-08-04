@@ -11,7 +11,7 @@ public class Student {
     }
 
     public Student(String name, double chinese, double math){
-//        System.out.println("有参构造方法");
+        System.out.println("有参构造方法");
         this.name = name;
         this.chinese = chinese;
         this.math = math;

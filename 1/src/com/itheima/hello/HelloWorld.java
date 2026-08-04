@@ -33,7 +33,11 @@
 //          ctrl+X 删除所在行
 //          ctrl+alt+L 格式化代码
 //          ctrl+/,ctrl+shift+/ 注释
-//          选中代码 ctrl+alt+T 能快速生成for 等代码结构
+//          选中代码 ctrl+alt+T 能快速生成for while等代码结构
+//          alt+insert 快速生成getter setter 等
+//          alt+enter 显示上下文操作 如导入类
+
+
 //  常规操作
 //          类的删除和重命名
 //          模块的删除时候 出现三个选择 要选模块和目录都重命名 好管理

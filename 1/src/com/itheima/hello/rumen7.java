@@ -1,10 +1,12 @@
 package com.itheima.hello;
 
-import com.itheima.rumen7.Student;
-import com.itheima.rumen7.Student1;
-import com.itheima.rumen7.Teacher;
+import com.itheima.rumen7.*;
+
+import java.util.Scanner;
 
 public class rumen7 {
+    private static Student1Operator so;
+
     public static void main(String[] args) {
         System.out.println("1 面向对象编程 快速入门");
 
@@ -77,18 +79,72 @@ public class rumen7 {
 
         Student1 s7 = new Student1();
         s7.setName("张三");// 这里s7.name = "张三"执行不了 只能用setter方法
-        s7.setChinese(80);
-        s7.setMath(90);
-        System.out.println(s7.getName() + " " + s7.getChinese() + " " + s7.getMath());
+        s7.setScore(80);
+        System.out.println(s7.getName() + " " + s7.getScore());
 
         System.out.println();
         System.out.println("5 实体类：就是一种特殊形式的类");
         // 实体类：这个类中的成员变量都有私有，且都要对外提供getXxx、setXxx方法。类中必须有一个公共的无参构造器。
+        // 实体类就是保存某个事物的数据的。只有成员变量，构造器和getter、setter方法。
 
+        // 实体类和封装不一样，封装的方法会很多，实体类只有构造器和getter、setter方法。Student1 就是一个实体类。
+        Student1 s8 = new Student1();
+        s8.setName("张三");
+        s8.setScore(80);
+        System.out.println(s8.getName() + " " + s8.getScore());
 
+        // 应用场景：实体类只负责数据存取，而对数据的处理交给其他类来完成。实现数据和数据业务处理相分离。
+        Student1 s9 = new Student1("老六", 80);
+        Student1Operator so = new Student1Operator(s9);
+        so.printPass();
 
+        System.out.println();
+        System.out.println("6 案例 模仿电影信息系统");
+        Movie[] movies = new Movie[4];
+        movies[0] = new Movie(1, "唐顿庄园", 9.5, 9.5, "罗伯·罗素", "杰森·斯坦森", "一部美国1990年的电影");
+        movies[1] = new Movie(2, "唐顿庄园2", 9.5, 9.5, "罗伯·罗素", "杰森·斯坦森", "一部美国1990年的电影");
+        movies[2] = new Movie(3, "唐顿庄园3", 9.5, 9.5, "罗伯·罗素", "杰森·斯坦森", "一部美国1990年的电影");
+        movies[3] = new Movie(4, "唐顿庄园4", 9.5, 9.5, "罗伯·罗素", "杰森·斯坦森", "一部美国1990年的电影");
 
+        MovieOperator mo = new MovieOperator(movies);
+        mo.printAllMovies();
+        mo.searchMovieById(3);
 
+        Scanner sc = new Scanner(System.in);
+        loop:while (true) {
+            System.out.println();
+            System.out.println();
+            System.out.println("==电影信息系统==");
+            System.out.println("1. 显示所有电影信息");
+            System.out.println("2. 根据编号查询电影信息");
+            System.out.println("3. 退出");
+            System.out.println("请输入操作命令");
+            int command = sc.nextInt();
+            switch (command) {
+                case 1:
+                    mo.printAllMovies();
+                    break;
+                case 2:
+                    System.out.println("请输入编号");
+                    int id = sc.nextInt();
+                    mo.searchMovieById(id);
+                    break;
+                case 3:
+                    System.out.println("谢谢使用");
+                    break loop;
+                default:
+                    System.out.println("输入错误");
+            }
+        }
+
+        System.out.println();
+        System.out.println("7 成员变量和局部变量的区别");
+        // 1 类中位置不同：成员变量（类中 方法外）、局部变量（常见于方法中）。
+        // 2 初始化值不同：成员变量（有默认值 不需要初始化赋值）、局部变量（没有默认值 使用前必须完成赋值）。
+        // 3 内存位置不同：成员变量（存在堆内存）、局部变量（栈内存）。
+        // 4 作用域不同：成员变量（整个对象）、局部变量（在所属的大括号中）。
+        // 5 生命周期不同：成员变量（与对象同生死）、局部变量（方法调用而生，方法结束而死）。
+        // 6 如果在类的成员方法中不想用局部变量，想用对象的成员变量，那么就可以用this关键字。
 
     }
 }
