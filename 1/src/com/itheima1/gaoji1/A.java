@@ -1,5 +1,6 @@
 package com.itheima1.gaoji1;
 
+// 父类
 public class A {
     // 公开成员
     public int i;
@@ -9,7 +10,7 @@ public class A {
 
     // 私有成员
     private int j;
-    public void print2(){
+    private void print2(){
         System.out.println("---print2---");
     }
 
