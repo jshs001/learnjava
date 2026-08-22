@@ -21,3 +21,6 @@ atm项目 :com.itheima.hello/rumen10
 static：com.itheima1.hello/gaoJi0
 继承：com.itheima1.hello/gaoJi1
 多态：com.itheima1.hello/gaoJi2
+final 常量：com.itheima1.hello/gaoJi3
+抽象类：com.itheima1.hello/gaoJi4
+
