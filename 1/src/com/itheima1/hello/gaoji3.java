@@ -74,6 +74,8 @@ class C {
     }
 }
 class D extends C {
+    public void testb1() {
+    }
 //    @Override
 //    void show() {
 //        System.out.println("show d");
