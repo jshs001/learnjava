@@ -38,8 +38,9 @@
 //          ctrl+/,ctrl+shift+/ 注释
 //          选中代码 ctrl+alt+T 能快速生成for while等代码结构
 //          alt+insert 快速生成getter setter 等
-//          alt+enter 显示上下文操作 如导入类 创建方法等
+//          alt+enter 显示上下文操作 如导入类 创建方法 抛出异常等等
 //          ctrl+鼠标左键 跳转到方法定义，有的时候为了查看某个方法源码可以先写下这个方法的demo再点一下
+//          ctrl+alt+space 引入类 参数等
 
 
 //  常规操作
