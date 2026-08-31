@@ -35,6 +35,9 @@ StringBuilder StringBuffer StringJoiner：com.changyongapi.hello/cy1
 Math System Runtime BigDecimal:com.changyongapi.hello/cy2
 传统日期时间:com.changyongapi.hello/cy3
 jdk8新增日期时间:com.changyongapi.hello/cy4
+Arrays、自定义排序、自定义比较：com.changyongapi.hello/cy5
+lambda表达式：com.changyongapi.hello/cy6
+方法引用：com.changyongapi.hello/cy7
 
 
 
