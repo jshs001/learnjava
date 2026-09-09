@@ -38,8 +38,9 @@ jdk8新增日期时间:com.changyongapi.hello/cy4
 Arrays、自定义排序、自定义比较：com.changyongapi.hello/cy5
 lambda表达式：com.changyongapi.hello/cy6
 方法引用：com.changyongapi.hello/cy7
-
-
+算法：com.changyongapi.hello/cy8
+正则表达式：com.changyongapi.hello/cy9
+异常处理：com.changyongapi.hello/cy10
 
 
 
