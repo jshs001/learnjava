@@ -43,9 +43,11 @@ lambda表达式：com.changyongapi.hello/cy6
 异常处理：com.changyongapi.hello/cy10
 
 
-
-
-
+集合：
+集合的常用方法、遍历：com.collection.hello/jh0
+list集合：com.collection.hello/jh1
+set集合：com.collection.hello/jh2
+Collection总结与并发修改异常问题：com.collection.hello/jh3
 
 
 
