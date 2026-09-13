@@ -17,7 +17,8 @@ public class io0 {
         // File:文件和目录名的抽象表示
         // 1 创建file对象
 //        File f1 = new File("..\\io0\\ab.txt"); // 路径分隔符要用\\ 或File.separator
-        File f1 = new File(".."+File.separator+"io0"+File.separator+"ab.txt");
+//        File f1 = new File(".."+File.separator+"io0"+File.separator+"ab.txt");
+        File f1 = new File("1/src/com/io/hello/io0/ab.txt");
         System.out.println(f1.getName());
         System.out.println(f1.length());
 
@@ -30,14 +31,30 @@ public class io0 {
         System.out.println(f3.length());
         System.out.println(f3.exists());
         // 注意路径有绝对路径和相对路径
+        // 注意：java的当前目录是项目的根目录  而不是深层的包目录；linux的当前目录是cd的目录。
+
         // File对象既可以代表文件 也可以代表文件夹
         // File封装的对象仅仅是一个路径名，这个路径可以存在也可以不存在
 
+        System.out.println();
+        System.out.println("3 File类的常用方法");
+        // 获取文件和目录信息
+        System.out.println(f1.exists()); // 判断文件是否存在 如果是使用相对路径 一定相对项目的根目录的路径
+        System.out.println("当前程序运行的真实起点位置是: " + new File(".").getAbsolutePath()); // 查看当前程序运行的真实起点位置
+        System.out.println(f1.isFile()); // 判断是否是文件
+        System.out.println(f1.isDirectory()); // 判断是否是文件夹
+        System.out.println(f1.getName()); // 获取文件名
+        System.out.println(f1.length()); // 获取文件长度
+        System.out.println(f1.lastModified()); // 获取文件最后修改时间
+        System.out.println(f1.canRead()); // 判断文件是否可读
+        System.out.println(f1.canWrite()); // 判断文件是否可写
+        System.out.println(f1.canExecute()); // 判断文件是否可执行
+        System.out.println(f1.isHidden()); // 判断文件是否隐藏
+        System.out.println(f1.getAbsolutePath()); // 获取文件的绝对路径
+        System.out.println(f1.getAbsoluteFile()); // 获取文件的绝对路径的File对象
+        System.out.println(f1.getPath()); // 获取文件的路径 就是相对路径
 
-
-
-
-
+        // 创建和删除文件
 
     }
 }
