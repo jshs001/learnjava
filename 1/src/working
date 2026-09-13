@@ -48,12 +48,10 @@ lambda表达式：com.changyongapi.hello/cy6
 list集合：com.collection.hello/jh1
 set集合：com.collection.hello/jh2
 Collection总结与并发修改异常问题：com.collection.hello/jh3
-
-
-
-
-
-
+可变参数、Collections工具类、斗地主案例：com.collection.hello/jh4
+map集合概念、常用方法、遍历：com.collection.hello/jh5
+HashMap、LinkedHashMap、TreeMap、集合嵌套：com.collection.hello/jh6
+jdk8新特性Stream:com.collection.hello/jh7
 
 
 
