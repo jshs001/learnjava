@@ -1,6 +1,7 @@
 package com.io.hello;
 
 import java.io.File;
+import java.util.Arrays;
 
 public class io0 {
     public static void main(String[] args) {
@@ -16,9 +17,9 @@ public class io0 {
         System.out.println("2 File类的创建");
         // File:文件和目录名的抽象表示
         // 1 创建file对象
-//        File f1 = new File("..\\io0\\ab.txt"); // 路径分隔符要用\\ 或File.separator
-//        File f1 = new File(".."+File.separator+"io0"+File.separator+"ab.txt");
-        File f1 = new File("1/src/com/io/hello/io0/ab.txt");
+//        File 1.阿斯蒂芬 = new File("..\\io0\\ab.txt"); // 路径分隔符要用\\ 或File.separator
+//        File 1.阿斯蒂芬 = new File(".."+File.separator+"io0"+File.separator+"ab.txt");
+        File f1 = new File("1/src/com/io/io0/ab.txt");
         System.out.println(f1.getName());
         System.out.println(f1.length());
 
@@ -55,6 +56,106 @@ public class io0 {
         System.out.println(f1.getPath()); // 获取文件的路径 就是相对路径
 
         // 创建和删除文件
+        File f4 = new File("1/src/com/io/io0/ab1.txt");
+        try {
+            System.out.println(f4.createNewFile()); // 创建文件 如果文件存在则返回false
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(f4.delete()); // 删除文件 如果文件不存在则返回false
+
+        File f5 = new File("1/src/com/io/io0/test");
+        System.out.println(f5.mkdir()); // 创建一级文件夹
+        System.out.println(f5.delete()); // 删除文件和空文件夹 删除后不进入回收站 直接永久删除
+
+        File f6 = new File("1/src/com/io/io0/test/test1");
+        System.out.println(f6.mkdirs()); // 创建多级文件夹
+        System.out.println(f6.delete()); // 只能删除一级文件夹
+        System.out.println(f5.delete());
+
+        System.out.println();
+        System.out.println("4 File类遍历文件夹");
+        File f7 = new File("1/src/com/io/io0");
+        String[] names = f7.list();  // 获取当前目录下所有一级文件名称到一个字符串数组中返回
+        for (String name : names) {
+            System.out.println(name);
+        }
+
+        File[] files = f7.listFiles();  // 获取当前目录下所有一级文件和文件夹的File对象到一个File数组中返回
+        for (File file : files) {
+            System.out.println(file.getAbsolutePath());
+        }
+
+        // 注意：list()和listFiles()方法获取当前目录下所有的一级文件名称或一级文件对象
+        System.out.println();
+        // listFiles方法的注意事项
+        // 1 当主调是文件，或者路径不存在时，返回null
+        File f8 = new File("1/src/com/io/io01");
+        System.out.println(f8.listFiles()); // 返回null
+
+        // 2 当主调是空文件夹时，返回一个长度为0的数组
+        File f9 = new File("1/src/com/io/io0/kt");
+        System.out.println(Arrays.toString(f9.listFiles())); // 返回一个长度为0的数组
+
+        // 3 当主调是一个有内容的文件夹时，将里面所有的一级文件和文件夹的路径放到file数组中返回
+        File f10 = new File("1/src/com/io/io0");
+        File[] files1 = f10.listFiles();
+        for (File file : files1) {
+            System.out.println(file);
+        }
+
+        // 4 当主调是一个文件夹，里面含有隐藏文件时，将里面苏哟文件和文件夹的路径放到File数组中返回，包含隐藏文件。
+        // 5 当主调是一个文件夹，但是没有权限访问该文件夹时，返回null。
+
+        System.out.println();
+        System.out.println("5 案例");
+
+        File dir = new File("1/src/com/io/io0/kt1");
+
+        File[] files2 = dir.listFiles();
+        for (File file : files2) {
+            String name = file.getName();
+            String index = name.substring(0,name.indexOf("."));
+            String lastName = name.substring(name.indexOf("."));
+            String newName = (Integer.valueOf(index) + 1) + lastName;
+
+            file.renameTo(new File(dir, newName));
+        }
+
+
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
