@@ -66,10 +66,10 @@ io流、FileInputStream、FileOutputStream：com.io.hello/io3
 数据流 序列化流：com.io.hello/io9
 io框架：com.io.hello/io10
 
-
-
-
-
+特殊文件与日志技术：
+属性文件：com.wjrz.hello/wjrz0
+xml文件：com.wjrz.hello/wjrz1
+日志技术：com.wjrz.hello/wjrz2
 
 
 

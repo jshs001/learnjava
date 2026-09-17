@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <name>张三</name>
+    <sex>男</sex>
+    <address>北京</address>
+    <password>123456</password>
+    <data> 3 &lt; 5 &amp;&amp; 6 &gt; 4 </data>
+    <data1> 3 < 5 && 6 > 4 </data1>
+</user>
