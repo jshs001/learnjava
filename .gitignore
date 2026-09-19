@@ -6,4 +6,5 @@
 # *.iml 纯java项目要注释这里 maven项目要解开这里
 out
 gen
-**/log/*
+/1/log/*
+!/1/log/.gitkeep
