@@ -44,6 +44,7 @@
 
     <!-- 2. 设置全局日志输出-->
     <!-- 级别由低到高：TRACE < DEBUG < INFO < WARN < ERROR，通常开发设置为 INFO 或 DEBUG -->
+    <!-- 日志级别设置为info ，即输出info级别及以上内容 -->
     <root level="INFO"><!-- 日志开启ALL 取消日志OFF -->
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />

@@ -35,7 +35,9 @@ public class wjrz2 {
         System.out.println("4 logback配置文件");
         // logback.xml 配置文件详解见：1/src/logback.xml
 
-
+        System.out.println();
+        System.out.println("5 日志级别");
+        // 日志级别：TRACE < DEBUG < INFO < WARN < ERROR 代表日志的重要性
 
 
 
