@@ -93,8 +93,9 @@ tcp支持多个客户端：com.network.hello/network2
 
 java高级技术：
 单元测试：com.gjjs.hello/gjjs0
-
-
+反射：com.gjjs.hello/gjjs1
+注解：com.gjjs.hello/gjjs2
+动态代理：com.gjjs.hello/gjjs3
 
 
 
